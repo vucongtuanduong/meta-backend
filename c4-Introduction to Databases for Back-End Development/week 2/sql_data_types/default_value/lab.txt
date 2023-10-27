@@ -1,0 +1,4 @@
+CREATE DATABASE cm_devices;
+USE cm_devices;
+CREATE TABLE address(id int not null, street varchar(255), postcode varchar(10), town varchar(30) default "Harrow");
+SHOW columns FROM address;
