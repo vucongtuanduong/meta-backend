@@ -16,3 +16,9 @@ def display_date(request):
 def menu(request):
     text = "<h1>Menu</h1><ul><li>Appetizers</li><li>Entrees</li><li>Desserts</li></ul>"
     return HttpResponse(text)
+
+def new_home(request):
+    path = request.path
+    response = HttpResponse("This works !")
+    # return HttpResponse(path, content_type = 'text/html', charset = 'utf-8')
+    return response
