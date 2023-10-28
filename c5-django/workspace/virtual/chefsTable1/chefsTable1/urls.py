@@ -19,11 +19,13 @@ from django.urls import path, include
 
 from MyApp import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('MyApp.urls')),
-    path('main/', include('MyApp.urls')),
-    path('home/', views.home, name='home'),
-    path('homepage/', views.homepage, name='homepage'),
-    path('date/', views.display_date, name='date'),
-    path('menu/', views.menu, name='menu')
+    # path('admin/', admin.site.urls),
+    # path('', include('MyApp.urls')),
+    # path('main/', include('MyApp.urls')),
+    # path('home/', views.home, name='home'),
+    # path('homepage/', views.homepage, name='homepage'),
+    # path('date/', views.display_date, name='date'),
+    # path('menu/', views.menu, name='menu')
+
+    path('dishes/<str:dish>', views.menuitems)
 ]
