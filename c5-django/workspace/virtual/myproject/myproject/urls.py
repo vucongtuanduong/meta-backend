@@ -1,8 +1,7 @@
-"""
-URL configuration for chefsTable1 project.
+"""myproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -17,16 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from MyApp import views
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    # path('', include('MyApp.urls')),
-    # path('main/', include('MyApp.urls')),
-    # path('home/', views.home, name='home'),
-    # path('homepage/', views.homepage, name='homepage'),
-    # path('date/', views.display_date, name='date'),
-    # path('menu/', views.menu, name='menu')
-
-    path('dishes/<str:dish>', views.menuitems)
+    path('admin/', admin.site.urls),
+    path('', include('myapp.urls'))
 ]
-handler404 = "chefsTable1.view.handler404"
